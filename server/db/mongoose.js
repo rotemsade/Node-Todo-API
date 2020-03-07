@@ -1,6 +1,9 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
-module.exports = {mongoose};
+module.exports = { mongoose };
